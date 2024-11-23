@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity 4.0: The Future of Energy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <h1>Electricity 4.0</h1>
+            <nav>
+                <ul>
+                    <li><a href="#market-growth">Market Growth</a></li>
+                    <li><a href="#renewables">Renewable Integration</a></li>
+                    <li><a href="#ai">AI in Energy</a></li>
+                    <li><a href="#ev">EV Integration</a></li>
+                    <li><a href="#efficiency">Energy Efficiency</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="market-growth">
+            <div class="content-box">
+                <h2>Global Market Growth and Adoption</h2>
+                <p>The global smart grid market is expected to grow from $33.9 billion in 2022 to $66.7 billion by 2030 with a CAGR of 8.7%. This growth is driven by renewable energy integration and smart grid technologies.</p>
+            </div>
+        </section>
+
+        <section id="renewables">
+            <div class="content-box">
+                <h2>Renewable Energy Integration</h2>
+                <p>Renewable energy now accounts for 38% of global electricity generation, with projections to rise to 50% by 2030. Smart grids and storage solutions are key to efficiently integrating renewables into the grid.</p>
+            </div>
+        </section>
+
+        <section id="ai">
+            <div class="content-box">
+                <h2>AI in Energy</h2>
+                <p>AI-driven technologies are revolutionizing energy management, helping utilities predict demand, optimize grid operations, and reduce inefficiencies. The market for AI in energy is expected to grow from $2.1 billion in 2022 to $12.6 billion by 2030.</p>
+            </div>
+        </section>
+
+        <section id="ev">
+            <div class="content-box">
+                <h2>Electric Vehicle Integration</h2>
+                <p>Electric vehicles (EVs) are accelerating in popularity, with EV sales expected to make up 40% of total car sales by 2030. Smart charging networks and V2G technology are vital to ensuring the grid remains stable while meeting the growing demand.</p>
+            </div>
+        </section>
+
+        <section id="efficiency">
+            <div class="content-box">
+                <h2>Energy Efficiency and Sustainability</h2>
+                <p>Energy efficiency technologies and decarbonization strategies are crucial for reducing emissions. The adoption of energy-efficient solutions like smart meters and AI-powered energy management is expected to help achieve global sustainability goals.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Electricity 4.0. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+<style>
+    /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 60px;
+}
+
+.content-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 1s ease-out forwards;
+}
+
+/* Animation */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Titles */
+h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 15px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Scroll Animation */
+section:nth-child(even) .content-box {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section .content-box {
+        padding: 20px;
+    }
+}
+
+</style>

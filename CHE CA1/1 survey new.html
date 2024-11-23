@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smart Energy Management Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Smart Energy Management Survey</h1>
+            <p>Help us understand your energy usage habits and thoughts on smart energy solutions.</p>
+        </div>
+    </header>
+
+    <section id="intro">
+        <div class="container">
+            <h2>What is Smart Energy Management?</h2>
+            <p>Smart Energy Management (SEM) refers to the use of modern technology to improve energy efficiency, reduce consumption, and minimize environmental impact. SEM includes devices like smart thermostats, energy monitoring systems, and renewable energy solutions.</p>
+        </div>
+    </section>
+
+    <section id="survey">
+        <div class="container">
+            <h2>Your Opinion Matters!</h2>
+            <form action="#">
+                <fieldset>
+                    <legend>How aware are you of smart energy management systems?</legend>
+                    <label>
+                        <input type="radio" name="awareness" value="very_aware"> Very Aware
+                    </label>
+                    <label>
+                        <input type="radio" name="awareness" value="somewhat_aware"> Somewhat Aware
+                    </label>
+                    <label>
+                        <input type="radio" name="awareness" value="not_aware"> Not Aware
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Do you currently use any smart energy management devices?</legend>
+                    <label>
+                        <input type="radio" name="usage" value="yes"> Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="usage" value="no"> No
+                    </label>
+                    <label>
+                        <input type="radio" name="usage" value="planning"> Planning to use
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>How important is energy saving to you?</legend>
+                    <input type="range" id="energy_savings" name="energy_savings" min="1" max="10" step="1" value="5">
+                    <span id="energy_savings_value">5</span>
+                </fieldset>
+
+                <fieldset>
+                    <legend>What would motivate you to use smart energy management systems? (Select all that apply)</legend>
+                    <label>
+                        <input type="checkbox" name="motivation" value="cost_savings"> Cost savings
+                    </label>
+                    <label>
+                        <input type="checkbox" name="motivation" value="environmental_concerns"> Environmental concerns
+                    </label>
+                    <label>
+                        <input type="checkbox" name="motivation" value="convenience"> Convenience
+                    </label>
+                    <label>
+                        <input type="checkbox" name="motivation" value="lack_of_info"> Lack of information
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Any suggestions or comments on smart energy management systems?</legend>
+                    <textarea name="feedback" rows="4" placeholder="Your feedback..."></textarea>
+                </fieldset>
+
+                <button type="submit" class="submit-btn">Submit Survey</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Smart Energy Management | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to dynamically update the range value
+        const rangeInput = document.getElementById('energy_savings');
+        const savingsValue = document.getElementById('energy_savings_value');
+        
+        rangeInput.addEventListener('input', function() {
+            savingsValue.textContent = rangeInput.value;
+        });
+    </script>
+</body>
+</html>
+<style>
+    /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container to center content */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #00796b;
+    color: white;
+    padding: 3em 0;
+    text-align: center;
+    border-bottom: 5px solid #004d40;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Intro Section */
+#intro {
+    padding: 2em 0;
+    background-color: #ffffff;
+}
+
+#intro h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #00796b;
+}
+
+#intro p {
+    font-size: 1.1em;
+}
+
+/* Survey Section */
+#survey {
+    background-color: #ffffff;
+    padding: 3em 0;
+}
+
+#survey h2 {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+    color: #00796b;
+}
+
+form {
+    background-color: #fafafa;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    color: #00796b;
+}
+
+label {
+    display: block;
+    margin: 0.8em 0;
+    font-size: 1.1em;
+}
+
+input[type="radio"], input[type="checkbox"], input[type="range"] {
+    margin-right: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 0.8em 0;
+}
+
+button.submit-btn {
+    background-color: #00796b;
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #004d40;
+}
+
+textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Footer */
+footer {
+    background-color: #00796b;
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+    margin-top: 3em;
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    #survey h2 {
+        font-size: 1.8em;
+    }
+
+    button.submit-btn {
+        width: 100%;
+    }
+}
+
+</style>

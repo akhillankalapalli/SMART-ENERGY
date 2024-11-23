@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smart Energy Management Survey Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Smart Energy Management Survey Results</h1>
+            <p>Visualizing the insights from our Smart Energy Management Survey</p>
+        </div>
+    </header>
+
+    <section id="survey-summary">
+        <div class="container">
+            <h2>Survey Insights</h2>
+            <p>Explore the results of the survey on smart energy management, including user awareness, usage, motivations, and more!</p>
+        </div>
+    </section>
+
+    <section id="graphs">
+        <div class="container">
+            <!-- Graph 1: Awareness of Smart Energy Systems -->
+            <div class="chart-container">
+                <h3>Awareness of Smart Energy Systems</h3>
+                <canvas id="awarenessChart"></canvas>
+            </div>
+
+            <!-- Graph 2: Motivation for Adopting Smart Energy -->
+            <div class="chart-container">
+                <h3>Motivation for Adopting Smart Energy Systems</h3>
+                <canvas id="motivationChart"></canvas>
+            </div>
+
+            <!-- Graph 3: Impact on Energy Bills -->
+            <div class="chart-container">
+                <h3>Impact of Smart Energy Systems on Energy Bills</h3>
+                <canvas id="energyBillsChart"></canvas>
+            </div>
+
+            <!-- Graph 4: Interest in Renewable Energy -->
+            <div class="chart-container">
+                <h3>Interest in Renewable Energy Solutions</h3>
+                <canvas id="renewableEnergyChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Smart Energy Management | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+ /* Reset some default styles */
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container to center content */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #00796b;
+    color: white;
+    padding: 3em 0;
+    text-align: center;
+    border-bottom: 5px solid #004d40;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Survey Summary Section */
+#survey-summary {
+    padding: 2em 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#survey-summary h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #00796b;
+}
+
+#survey-summary p {
+    font-size: 1.2em;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Graph Section */
+#graphs {
+    padding: 3em 0;
+    background-color: #ffffff;
+}
+
+.chart-container {
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    color: #00796b;
+}
+
+/* Footer */
+footer {
+    background-color: #00796b;
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+    margin-top: 3em;
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    #survey-summary h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .chart-container {
+        width: 100%;
+    }
+}
+
+</style>

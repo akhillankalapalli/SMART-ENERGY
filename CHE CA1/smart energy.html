@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powering the Future: Smart Energy Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Powering the Future: Smart Energy Management</h1>
+        <nav>
+            <!-- Navigation menu remains the same -->
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Smart Energy Management</h2>
+            <div class="section-content">
+                <h3> Smart energy management: real-time prediction and optimization for
+                    IoT-enabled smart homes</h3>
+                    <img src="Screenshot 2024-11-17 100653.png">
+                <h3>Introduction</h3>
+                <p>  In recent years, the global community has witnessed
+                    an unprecedented surge in concerns regarding
+                    energy consumption and its environmental repercus
+                   sions. As the world grapples with the challenges of
+                    climate change and strives toward sustainability, the
+                    spotlight has turned to the domain of residential
+                    energy management. Within this context, homes
+                    emerge as pivotal arenas for intervention, given their
+                    substantial contribution to overall energy consump
+                   tion. Despite advancements in technology and grow
+                   ing awareness regarding energy conservation,
+                    traditional approaches to home energy (Aliero et al.,
+                    2021; Hosseinian & Damghani, 2019) usage often  prove inadequate in addressing the intricacies of
+                    modern living dynamics and personalized consump
+                   tion patterns. Consequently, there exists a pressing
+                    need for innovative solutions that can not only
+                    monitor and regulate energy usage but also adapt
+                    in real-time to the evolving needs (Fioretto et al.,
+                    2017) and behaviors of homeowners.
+                    The evolving landscape of residential energy man
+                   agement is characterized by a confluence of factors,
+                    including rapid technological advancements (Shareef
+                    et al., 2020), increasing environmental consciousness,
+                    and rising energy costs. These developments have
+                    spurred a paradigm shift in how individuals interact
+                    with their home energy systems, necessitating a  holistic and intelligent approach to energy manage
+                    ment (Priyadarshini et al., 2022). Recognizing the lim
+                    itations of conventional methodologies, there is a
+                     growing impetus to develop integrated systems that
+                     harness the power of emerging technologies such as
+                     the Internet of Things (IoT) and machine learning
+                     (ML) algorithms (Rashid et al., 2019; Vasudevan et al.,
+                     2021).
+                     Against this backdrop, this research paper seeks to
+                     explore the design, development, and implementation
+                     of a Smart Home Energy Management System
+                     (SHEMS) that leverages IoT and ML technologies to
+                     optimize energy consumption and promote sustain
+                    able living practices. The SHEMS paper encompasses
+                     a multifaceted approach aimed at monitoring, control
+                    ling, and optimizing energy usage within residential
+                     settings. Central to this endeavor is the utilization of a
+                     diverse array of sensors, including but not limited to,
+                     current and voltage sensors, temperature sensors, and
+                     light sensors, to capture real-time data on energy
+                     consumption and environmental parameters.
+                     Furthermore, the integration of machine learning
+                     algorithms, specifically the Gradient Boosting algo
+                    rithm, adds a layer of intelligence to the SHEMS, ena
+                    bling it to analyze complex datasets, detect patterns,
+                     and make data-driven decisions regarding energy
+                     optimization. By harnessing the power of ML, the
+                     SHEMS can adapt to dynamic usage patterns, predict
+                     future consumption trends, and identify opportunities
+                     for energy savings. Moreover, the system’s ability to
+                     detect and mitigate energy wastage in real-time
+                     ensures efficient utilization of resources and contrib
+                    utes to overall energy conservation efforts.
+                     Smart homes often have an energy consumption
+                     that is 10-30% lower than that of standard homes.
+                     The decrease in energy use can be ascribed to the
+                     utilization of intelligent thermostats, automatic light
+                    ing, and energy monitoring systems
+                     In essence, the SHEMS represents a pioneering
+                     initiative in the field of residential energy manage
+                    ment, offering a holistic and intelligent solution to
+                     address the challenges of modern living. Through its
+                     integration of IoT and ML technologies, coupled
+                     with advanced sensor networks, the SHEMS promises
+                     to revolutionize the way homeowners interact with
+                     their energy systems, paving the way for a more sus
+                    tainable and energy-efficient future  </p>
+                <h3> Objectives</h3>
+                <p>  The objectives of this research endeavor revolve
+                    around the development and implementation of a
+                    Smart Home Energy Management System (SHEMS)  that integrates the Internet of Things (IoT) and
+                    machine learning (ML) technologies to achieve several
+                    key goals. Firstly, the system aims to monitor energy
+                    consumption in real-time, leveraging a diverse array of
+                    sensors to capture data on electricity usage, environ
+                   mental parameters, and appliance behavior. Secondly,
+                    SHEMS seeks to optimize energy usage by analyzing
+                    complex datasets using ML algorithms, specifically
+                    focusing on the Gradient Boosting algorithm, to iden
+                   tify patterns, predict future consumption trends, and
+                    detect opportunities for energy savings. Additionally,
+                    the system aims to empower homeowners with
+                    greater control over their energy usage, providing
+                    actionable insights and recommendations for improv
+                   ing efficiency and reducing wastage. One of the pri
+                   mary objectives for the system is to attain a
+                    prediction accuracy of at least 95%, ensuring depend
+                   able and efficient energy management while concur
+                   rently reducing the RMSE and MAE. Finally, SHEMS
+                    endeavors tocontribute tobroader sustainability ini
+                   tiatives by promoting energy conservation practices
+                    and facilitating the transition toward more environ
+                   mentally friendly lifestyles.
+                    The subsequent section offers a comprehensive
+                    overview of pertinent literature and research endeav
+                   ors in the domain, delving into the methodologies,
+                    algorithms, and technologies employed in similar sys
+                   tems. In the third section, the proposed architecture
+                    diagram of the system is presented, outlining its com
+                   ponents and process flow. The fourth section details
+                    each component’s functionality within the architec
+                   ture, including IoT sensors, data preprocessing,
+                    machine learning algorithms, and energy optimization
+                    modules. Section five outlines the proposed method
+                   ology for implementing the system, covering data col
+                   lection, preprocessing, model training, and real-time
+                    optimization strategies. The sixth section presents the
+                    system’s performance results, including metrics such
+                    as model accuracy, RMSE, MAE, and energy savings
+                    achieved. Lastly, the paper concludes by summarizing
+                    key findings and discussing potential future enhance
+                   ments for smart home energy management systems.</p>
+                <h3> Literature Survey</h3>
+                <p> In the realm of residential energy management, the
+                    emergence of innovative technologies has spurred a
+                    wave of research aimed at optimizing energy con
+                   sumption and promoting sustainability. This litera
+                   ture survey delves into a diverse array of studies and
+                    papers that explore the intersection of Internet of
+                    Things (IoT) and machine learning (ML) in the con
+                   text of smart home energy management systems With the ever-growing demand for efficient energy
+                   usage and the pressing need to mitigate environ
+                  mental impact, researchers and practitioners are
+                   increasingly turning to IoT-enabled solutions and
+                   advanced ML algorithms to revolutionize the way
+                   energy is monitored, controlled, and optimized
+                   within residential settings. By synthesizing insights
+                   from various studies, this survey spans topics such
+                   as energy monitoring (Asare-Bediako et al., 2013;
+                   Moore et al., 2019), wireless connectivity (Metering
+                   et al., 2017), predictive maintenance, and user
+                   engagement in similar research. It summarizes the
+                   key findings, results, advantages, and drawbacks of
+                   these studies, laying the foundation for the SHEMS
+                   within the broader context of existing research.
+                   Smart Home Energy Management System Based
+                   on Artificial Intelligence (Ma et al., 2021) connects
+                   users to the network. Smart terminals can read, pro
+                  cess, and display home electricity, water, fault, and
+                   other information to help people use electricity effi
+                  ciently and save money. Users can monitor home
+                   appliances and receive prepaid services on the
+                   Internet, mobile phones, and more. Advanced sen
+                  sors can detect changes in the environment and
+                   communicate with people in real-time. Artificial intel
+                  ligence allows electronic devices to analyze and
+                   combine the necessary data, draw conclusions, and
+                   inform users. Common artificial intelligence techni
+                  ques used in computer science include experts,
+                   neural networks, fuzzy sets, heuristic search algo
+                  rithms, etc. takes place. Next-Generation Artificial
+                   Intelligence Technology (NGAI) is a game changer in
+                   the field of energy distribution and energy storage.
+                   solution strategy due to the complex nonlinearities,
+                   uncertainties, and spatiotemporal differences caused
+                   by most new power grid connectivity. Ability to ana
+                  lyze real-time and historical data to provide long
+                  term decision-making advice to service users.
+                   Design and Implementation of a Smart Home
+                   Energy Management System Using IoT and Machine
+                   Learning (Hosseinian and Damghani, 2019) demon
+                  strates energy management that can optimize the
+                   energy use of smart homes. The system uses IoT
+                   devices to collect real-time energy usage data and
+                   machine learning to predict future energy usage pat
+                  terns. This research work reports the use of deep
+                   neural networks (DNN) to design and implement
+                   smart home management systems (Shakeri et al.,
+                   2020) with the help of IoT devices and machine
+                   learning. The results of this work show that the sys
+                  tem uses Karas (or TensorFlow) to train a DNN based
+                   on energy data from IoT sensors. The system is used
+                   for real-time monitoring with remote access to the  user interface. The system aims to reduce energy
+                   costs and provide instant feedback to users.
+                   Smart home and smart grid energy management
+                   systems (Zhou et al., 2016) offer opportunities and
+                   technologies to meet the high energy needs of the
+                   expanding energy sector. One-third of electricity
+                   demand is generated by the household sector.
+                   Energy management is designed for the smart home
+                   of the future. Smart homes will be able to control,
+                   manage, and optimize their devices with minimal
+                   human intervention. The ability of smart homes to
+                   manage energy resources, including energy produc
+                  tion and storage, is an important factor in the devel
+                  opment of smart homes. This article provides
+                   detailed information about new building manage
+                  ment publications. Various devices and plugin elec
+                  tric vehicle (EV) technologies used in smart home
+                   systems are discussed, as well as different strategies.
+                   Automatic optimal multi-energy management of
+                   smart homes (Fiorini and Aiello, 2022) discovers
+                   approximately 35% of carbon dioxide emissions in
+                   industrialized countries come from residential and
+                   commercial buildings. Improving building efficiency
+                   and sustainability is therefore an important step
+                   toward a low CO2 energy society. The key to achiev
+                  ing sustainable development is to replace energy
+                   sources with energy storage and technology to
+                   improve the impact on the environment. Most stud
+                  ies on building management focus on the economic
+                   aspects of the building and ignore the environment.
+                   It has also been stated that the concept of energy
+                   flexibility is the ability to change demand over time
+                   or limit demand as much as possible to reduce oper
+                  ating costs. This research work offers a multi-energy,
+                   multipurpose programming model to effectively
+                   manage the supply, demand, and exchange of vari
+                  ous energies based on dynamic prices and carbon
+                   emissions. This article is a comprehensive and inte
+                  grated research which includes 200 smart homes
+                   with different heating and electrical equipment and
+                   equipped with various smart technologies. The sys
+                  tem’s effectiveness in reducing households’ carbon
+                   footprint and rewarding consumers is evaluated
+                   based on historical data and statistics from three
+                   neighboring European countries.
+                   Evolution of Smart Home Energy Management
+                   System Using Internet of Things and Machine
+                   Learning Algorithms (Singh et al., 2022). In smart cit
+                  ies, this research helps and solve energy manage
+                  ment problems. The system reduces the energy
+                   costs of a smart home or building through recom
+                  mendations and predictions. This paper released a 5
+                  layer system that collects data in real-time for the
+                  management of building energy; identifies data pat
+                  terns and adds them to recommendations to create
+                   energy- saving strategies. The various sensors of the
+                   concept architecture collect a lot of data. The archi
+                  tecture consists of many layers, each dedicated to a
+                   specific function. Using various pre-learning and
+                   machine learning (ML) methods such as simple linear
+                   regression (SLR), decision tree regression (DTR), ran
+                  dom forest regression (RFR), K-nearest neighbor
+                   regression (KNNR), and support vector regression
+                   (SVR) for data analysis. This study shows that deci
+                  sion tree regression (0.9999) and random forest
+                   regression (0.9999) compare well with simple hori
+                  zontal regression (0.9901), K-neighbor regression
+                   (0.9720), and support vector regression (0.9966).
+                   found that it performed. SLR (0.9900 and 0.0099),
+                   DTR (0.0439 and 0.0019), RFR (0.0427 and 0.0018),
+                   KNNR (0.0285 and 0.0018), KNNR (0.1690) and
+                   RMSEERE 0.M. This research concluded that decision
+                   trees and random forest regression were more
+                   expensive and less error-prone than other algo
+                  rithms. Data analysis regression techniques can be
+                   used for regulatory approval using a design strategy.
+                   Home energy management system in a Smart
+                   Grid scheme to improve reliability of power systems
+                   (Hartono et al., 2018) This paper envisions the devel
+                  opment of intelligent homes fostering automated,
+                   adaptable interactions between users and applian
+                  ces, with a focus on optimizing electricity consump
+                  tion. Evolving smart home applications (Shareef
+                   et al., 2020), propelled by technological advance
+                  ments and environmental regulations, aim to effi
+                  ciently manage energy, curbing costs and enhancing
+                   user comfort. At the paper’s core is a sophisticated
+                   smart grid integrating AI and communication tech
+                  nologies (Alimi & Ouahada, 2018; Zhou et al., 2016)
+                   improving energy production efficiency and reduc
+                  ing costs. Users actively participate through purpose
+                  built
+                   applications,
+                   particularly
+                   Home Energy
+                   Management System (HEMS) apps, alongside
+                   Demand Side Management (DSM) and Plugin Electric
+                   Vehicle (PEV) initiatives, significantly boosting energy
+                   efficiency in the smart grid. The research under
+                  scores HEMS’ positive impact on reducing energy
+                   loss and optimizing distribution within the smart
+                   grid system.
+                   The paper addresses the pressing global issue of
+                   inefficient energy usage, particularly focusing on the
+                   context of Malaysia where residential energy con
+                  sumption is steadily rising due to population growth
+                   and a lack of awareness regarding energy conserva
+                  tion. Leveraging the Internet of Things (IoT) technol
+                  ogy, the paper proposes a smart energy monitoring
+                   system for home appliances (Rashid et al., 2019),
+                   integrating Cognitive IoT (CIoT) principles. This sys
+                  tem comprises a Raspberry Pi-based smart plug for
+                   data collection, a Google Colab training server for
+                   machine learning model development using
+                   TensorFlow-based Long Short-term Memory (LSTM),
+                   and a dashboard for real-time energy consumption
+                   monitoring. The LSTM model achieves high accuracy,
+                   surpassing 80%, with low mean squared error and
+                   high R2 scores, demonstrating its effectiveness in
+                   forecasting electricity consumption and detecting
+                   abnormal energy usage patterns. This integrated
+                   approach offers a promising solution for optimizing
+                   energy management in residential settings.
+                   The paper delves into the significance of the
+                   Internet of Things (IoT) as a crucial data source for
+                   data science technology, particularly in the realm of
+                   energy consumption prediction for smart residential
+                   buildings. Highlighting the importance of accurately
+                   forecasting energy usage for sustainable urban
+                   development, the study focuses on exploring deep
+                   learning (Syamala et al., 2023) techniques for this
+                   purpose. It emphasizes the critical role of optimal
+                   window size in enhancing prediction performance
+                   and model uncertainty estimation. Through its inves
+                  tigation, the paper demonstrates the effectiveness of
+                   deep learning models in accurately estimating
+                   household energy consumption patterns, making
+                   them an optimal choice for predicting performance
+                   and uncertainty in smart residential buildings.
+                   The paper focuses on designing an effective
+                   demand response (DR) program for smart homes to
+                   optimize energy usage based on user preferences
+                   (Chen et al., 2021). It introduces a multi objective
+                   reinforcement learning (MORL) algorithm that
+                   improves upon conventional methods by addressing
+                   user preference changes and uncertainties in future
+                   pricing and renewable energy generation. The pro
+                  posed algorithm utilizes two Q-tables to simultan
+                  eously
+                   consider
+                   electricity
+                   cost
+                   and user
+                   dissatisfaction, adapting appliance scheduling based
+                   on previous experiences to achieve optimal results
+                   swiftly. The algorithm’s high generalizability enables
+                   its implementation in smart homes with diverse set
+                  ups, including energy storage systems, renewable
+                   energy sources, and various types of appliances.
+                   Numerical analysis using real-world data demon
+                  strates the algorithm’s ability to achieve significant
+                   cost reductions (8.44%) while only marginally
+                   increasing dissatisfaction levels (1.37%) on average,
+                   even in the presence of price and renewable energy
+                   uncertainty </p>
+                <h3> Architecture of proposed system</h3>
+                <p> The architecture diagram of the proposed Smart
+                    Home Energy Management System (SHEMS)
+                    depicted in Figure 1, embodies a comprehensive
+                    framework that seamlessly integrates various compo
+                   nents to enable effective monitoring, control, and
+                    optimization of energy consumption in residential
+                    environments.
+                    At the core of the architecture lies the IoT sen
+                   sors, strategically deployed throughout the home to
+                    capture real-time data on energy usage, environ
+                   mental conditions, and appliance operation. These
+                    sensors, including current and voltage sensors, tem
+                   perature sensors, light sensors, and others, serve as
+                    the primary data sources for the SHEMS. After  collecting the data from the sensors, it is imported
+                    into a .csv file for further processing and analysis.
+                    The IoT gateway acts as a centralized hub respon
+                   sible for aggregating data from the distributed sen
+                   sors and transmitting it to the data preprocessing
+                    and storage module. This module performs crucial
+                    tasks such as data cleaning, normalization, and
+                    aggregation to ensure the quality and integrity of
+                    the data before storage. The energy management
+                    system (EMS) component utilizes the pre-processed
+                    data for feature extraction and data transformation,
+                    extracting relevant insights and patterns related to
+                    energy consumption and user behavior. These fea
+                   tures are then fed into the machine learning infra
+                   structure, which encompasses a range of algorithms
+                    and models for predictive analytics and optimization.
+                    The machine learning infrastructure employs
+                    advanced techniques, including the Gradient Boosting
+                    algorithm, to analyze historical data, forecast future
+                    energy consumption, and identify optimization oppor
+                   tunities. The Gradient Boosting algorithm captures
+                    non-linear relationships and interactions between fea
+                   tures and reduces overfitting issues. By continuously
+                    learning from past data and adapting to changing
+                    conditions, the system can dynamically adjust energy
+                    consumption patterns to maximize efficiency and cost
+                    savings. The energy consumption and optimization
+                    module leverage the insights generated by the
+                    machine learning models to implement real-time con
+                   trol strategies, such as load shifting, demand
+                    response, and appliance scheduling. These strategies
+                    aim to minimize energy wastage, reduce peak
+                    demand, and optimize energy usage based on user
+                    preferences and environmental conditions.
+                    The user interface component provides home
+                   owners with intuitive dashboards and visualizations
+                    to monitor energy usage, receive actionable recom
+                   mendations, and interact with the system. Through a
+                    user-friendly interface, homeowners can gain insights
+                    into their energy consumption patterns, track cost
+                    savings, and adjust settings to meet their energy
+                    management goals.
+                    Overall, the architecture diagram of SHEMS
+                    embodies a holistic approach to smart home energy
+                    management, leveraging IoT sensors, data preprocess
+                   ing, machine learning, and user interface components
+                    to create an intelligent system capable of optimizing
+                    energy usage and promoting sustainability</p>
+                <h3> Component description</h3>
+                <p>The proposed system is made up of the following
+                    primary components </p>
+                <img src="Screenshot 2024-11-17 102818.png">
+                <p> ACS712 current sensor: The ACS712 current sensor is
+                    a crucial component responsible for monitoring the
+                    energy or current consumption of individual applian
+                   ces. Its precision and real-time data acquisition capa
+                   bilities
+                    make it an indispensable tool for
+                    understanding power usage patterns. The sensor’s
+                    accuracy empowers users with detailed insights into
+                    the electricity consumption of various appliances,
+                    enabling informed decisions about energy manage
+                   ment strategies.
+                    Relay module: The relay module introduces a
+                    dynamic element to the system by enabling bidir
+                   ectional communication between the ESP32 and
+                    household appliances. This component serves as
+                    the bridge between the digital realm of the micro
+                   controller and the physical world of appliances.
+                    Users gain the ability to remotely control devices,
+                    offering not only convenience but also an avenue
+                    for implementing responsive energy-saving meas
+                   ures. The relay module enhances the adaptability
+                   and user interaction aspects of the energy moni
+                   toring system.
+                    ZMPT101B voltage sensor: Working in tandem with
+                    the current sensor, the ZMPT101B voltage sensor plays a
+                    pivotal role in measuring the voltage levels in the house
+                   hold. This dual-sensor approach ensures comprehensive
+                    data for accurate calculations of power consumption. By
+                    providing precise information on voltage, the sensor
+                    contributes to the system’s ability to monitor and ana
+                   lyze energy usage with a high degree of accuracy.
+                    Jumper wires and breadboard: Jumper wires and
+                    the breadboard serve as the physical backbone of
+                    the system, providing a modular and organized
+                    approach to circuit development. These components
+                    facilitate the connection and prototyping of the cir
+                   cuit, allowing for easy testing and iteration during
+                    the developmental phase. Their modular nature
+                    enhances the flexibility and scalability of the system,
+                    ensuring a smooth and efficient prototyping process.
+                    Power supply: The power supply is the lifeblood of
+                    the entire system, ensuring its continuous operation.
+                    Whether drawing power from a direct connection or
+                    relying on batteries, the stability of the power supply
+                    is paramount. This component guarantees the reli
+                   ability and stability necessary for uninterrupted mon
+                   itoring and management of household energy
+                    consumption, even in the face of unexpected power
+                    outages. It forms the foundation for the system’s
+                    resilience and effectiveness.
+                    DS18B20 temperature sensor: The DS18B20 tempera
+                   ture sensor introduces an environmental awareness
+                    dimension to the system. By measuring ambient tem
+                   perature, it enables the system to identify scenarios
+                    where energy may be unnecessarily expended, such as
+                    running cooling devices when not needed. This sensor
+                    enhances the system’s capacity to optimize energy con
+                   sumption based on the surrounding environmental
+                    conditions, fostering efficiency and sustainability.
+                    LDR (light-dependent resistor): The LDR is a vital
+                    component for enhancing the intelligence of the sys
+                   tem. By detecting ambient light levels, it plays a piv
+                   otal role in identifying instances of unnecessary
+                    energy consumption, such as keeping lights on dur
+                   ing daylight hours. Integrating the LDR into the sys
+                   tem contributes to intelligent energy-efficient
+                    control, making the system responsive to the light
+                   ing needs of the environment </p>
+                <h3> Proposed methodology</h3>
+                <p> The methodology for deploying the ‘Smart Home
+                    Management System using the Internet of Things’
+                    (IoT) starts with a thorough literature review to  educate the researchers on best practices for energy
+                    management based on the Internet of Things (IoT).
+                    The hardware components defined by the architec
+                   ture diagram are as shown in Figure 2 and Figure 3
+                    (ESP32 microcontroller), sensors and relay module,
+                    and LDR will be purchased and integrated seamlessly.
+                    Software development will focus on efficiency, secur
+                   ity, and compatibility, using machine learning to ana
+                   lyze the data and improve system intelligence. The
+                    system’s intelligence will be augmented by integrat
+                   ing environmental data from the DS18B20 tempera
+                   ture sensor and LDR. Establishing communication
+                    channels connecting the ESP32 to external platforms
+                    will be a critical step, utilizing secure IoT protocols to
+                    facilitate remote monitoring and control. To ensure
+                    scalability, the system’s modular architecture will be
+                    utilized to easily incorporate additional features and
+                    sensors in the future</p>
+                <h3> Data collection module</h3>
+                <p>  The data collection module forms the foundation of
+                    SHEMS, acquiring real-time data on energy con
+                   sumption and environmental factors within the
+                    household. Current and voltage sensors, such as the
+                    ACS712 and ZMPT101B, capture precise measure
+                   ments of energy usage, while additional sensors like
+                    the DS18B20 temperature sensor and LDR (Light
+                    Dependent Resistor) provide data on ambient tem
+                   perature and light levels, respectively. These sensors
+                    are interfaced with an ESP32 microcontroller, which
+                    serves as the central processing unit for data acquisi
+                   tion and initial preprocessing. Figure 4 demonstrates
+                    the data collection phase. After collecting the data
+                    collected from various sensors within the smart
+                    home environment (e.g. ACS712 current sensor,
+                    ZMPT101B voltage sensor, DS18B20 temperature
+                    sensor, LDR) is cleaned and preprocessed. This
+                    involves normalizing or standardizing the data to
+                    ensure that all features are on a comparable scale,
+                    facilitating better model performance. For handling
+                    the missing data-Imputtaion techniques and
+                    Interploation are applied. The outliers are removed
+                    by using the Z-score and Interpolation techniques
+                    are used.
+                    The dataset is then divided into training and test
+                   ing sets, typically using an 80-20 split. This means
+                    that 80% of the data is used to train the models,
+                    while the remaining 20% is reserved for testing. This
+                    split is crucial for evaluating the model’s perform
+                   ance on unseen data, thus providing an unbiased
+                    assessment of its predictive capabilities </p>
+                <img src="Screenshot 2024-11-17 103906.png">
+                <img src="Screenshot 2024-11-17 103844.png">
+                <h3> Machine learning model selection</h3>
+                <p> After collecting the data from the sensors, it is
+                    imported into a .csv file for further processing and
+                    analysis. This step ensures that the data is organized
+                    and accessible for various data manipulation and  modeling tasks. The .csv file serves as a structured
+                    repository of the sensor data, enabling us to perform
+                    data preprocessing, feature engineering, and model
+                    training with the help of gradient boost algorithm.
+                    To leverage the collected data for intelligent energy
+                   </p>
+                   <img src="Screenshot 2024-11-17 104408.png">
+                <p> management, a machine learning model is selected
+                    to analyze consumption patterns, forecast future
+                    demand, and recommend energy-saving strategies.
+                    Considering the complexity and predictive require
+                   ments of SHEMS, a Gradient Boosting Machine
+                    (GBM) is chosen as the primary machine learning
+                    model. GBMs offer high accuracy, robustness to
+                    overfitting, and the ability to capture complex rela
+                   tionships in the data, making them well-suited for
+                    energy consumption optimization tasks</p>
+                <h3> Model training and optimization</h3>
+                <p>The selected GBM model undergoes training using
+                    historical energy consumption data collected from
+                    the household. Feature engineering techniques are
+                    applied to extract relevant features from the raw
+                    sensor data, including time of day, appliance usage
+                    patterns, weather conditions, and occupancy status.
+                    The model is trained to predict future energy
+                    demand based on these features, optimizing for
+                    accuracy and generalization performance through
+                    techniques like hyperparameter tuning and cross
+                   validation.</p>
+                <h4> Cross-validation method</h4>
+                <p> To further enhance the reliability of the models and
+                    reduce the risk of overfitting, cross-validation is
+                    employed. Cross-validation involves partitioning the  training data into multiple subsets (folds) and train
+                    ing the model multiple times, each time using a dif
+                    ferent fold as the validation set.
+                     K-Fold Cross-Validation: This method divides the
+                     training data into K equal-sized folds. This compre
+                    hensive evaluation ensures that every data point is
+                     used for both training and validation, enhancing the
+                     model’s robustness</p>
+                <h4> Hyperparameter tuning</h4>
+                <p> Hyperparameter tuning is a critical step in optimiz
+                    ing the performance of machine learning models. It
+                     involves selecting the best set of hyperparameters
+                     for the model, which are parameters set before the
+                     training process begins.
+                     Grid Search: An exhaustive search through a pre
+                    defined set of hyperparameters. Each combination is
+                     evaluated using cross-validation, and the combin
+                    ation with the highest performance is selected.
+                     For the Gradient Boosting model, hyperpara
+                    meters such as the learning rate, number of estima
+                    tors, and maximum depth of trees are tuned.
+                     Random Search: Randomly samples combinations
+                     of hyperparameters from the predefined space. This
+                     method is more efficient for large hyperparameter
+                     spaces.
+                     Bayesian Optimization: Uses a probabilistic model
+                     of the hyperparameter space to select the most
+                     promising values iteratively. This advanced method efficiently
+                     parameters.
+                     For the Gradient Boosting model in SHEMS, the
+                     tuning process involved:
+                     1.
+                     2.
+                     3.
+                     Defining the Search Space: Learning rate (e.g.
+                     0.01, 0.1), number of estimators (e.g. 100, 200,
+                     300), and maximum depth (e.g. 3, 5, 7).
+                     Performing Cross-Validation: Evaluating each
+                     combination using K-fold cross-validation to
+                     ensure robust generalization.
+                     Selecting the Best Hyperparameters: Choosing
+                     the combination that achieved the highest
+                     cross-validation score.
+                     In our paper, denoted by the training dataset
+                     fðxi , yiÞgn
+                     i¼1, where xi represents input features (e.g.
+                     sensor data) and yi represents the corresponding tar
+                    get variable (energy consumption), the objective is
+                     to learn a predictive model FðxÞ that accurately pre
+                    dicts energy consumption based on input features.
+                     The general algorithm for Gradient Boosting, tail
+                    ored to our paper’s needs, can be outlined as
+                     follows: 
+                    </p>
+                <img src="Screenshot 2024-11-17 105633.png">
+                <img src="Screenshot 2024-11-17 105648.png">
+                <h3> Conclusion and future enhancements</h3>
+                <p> In summary, the Smart Home Energy Management
+                    System (SHEMS) outlined in this study offers a robust
+                    framework for enhancing energy efficiency and cost
+                   effectiveness in residential environments. Through the
+                    fusion of Internet of Things (IoT) technologies and
+                    machine learning algorithms, SHEMS empowers
+                    homeowners with real-time insights into energy con
+                   sumption patterns, enabling informed decisions for
+                    conservation and savings. Leveraging the Gradient
+                    Boosting algorithm ensures precise forecasting of
+                     </p>
+                <img src="Screenshot 2024-11-17 105929.png">
+                <img src="Screenshot 2024-11-17 105945.png">
+                <h3> References</h3>
+                <p>
+                    <ul>
+                        <li> Aliero, M. S., Qureshi, K. N., Pasha, M. F., & Jeon, G. (2021).
+                            Smart home energy management systems in internet of
+                            things networks for green cities demands and services.
+                            Environmental Technology & Innovation, 22, 101443.
+                            https://doi.org/10.1016/j.eti.2021.101443</li>
+                        <li> Alimi, O., & Ouahada, K. (2018). Smart home appliances
+                            scheduling to manage energy usage. In 2018 IEEE 7th
+                            International Conference on Adaptive Science &
+                            Technology (ICAST) (pp. 1–5). IEEE.</li>
+                        <li> Asare-Bediako, B., Kling, W. L., & Ribeiro, P. F. (2013).
+                            Integrated agent based home energy management sys
+                           tem for smart grids applications. In IEEE PES ISGT Europe
+                            2013 (pp. 1–5). IEEE.</li>
+                        <li> Chen, S. J., Chiu, W. Y., & Liu, W. J. (2021). User preference
+                            based demand response for smart home energy man
+                            agement using multiobjective reinforcement learning.
+                             IEEE Access, 9, 161627–161637. https://doi.org/10.1109/
+                             ACCESS.2021.3132962</li>
+                        <li> Fioretto, F., Yeoh, W., & Pontelli, E. (2017). A multiagent sys
+                            tem approach to scheduling devices in smart homes. In
+                             Proceedings of the 16th Conference on Autonomous Agents
+                             and MultiAgent Systems (pp. 981–989). International
+                             Foundation for Autonomous Agents and Multiagent
+                             Systems</li>
+                        <li> Fiorini, L., & Aiello, M. (2022). Automatic optimal multi
+                            energy management of smart homes. Energy
+                             Informatics, 5(1), 1–20. https://doi.org/10.1186/s42162
+                            022-00253-0</li>
+                        <li> Hartono, B. S., Mursid, S. P., & Prajogo, S. (2018). Home
+                            energy management system in a Smart Grid scheme to
+                            improve reliability of power systems. IOP Conference
+                            Series: Earth and Environmental Science, 105, 012081.
+                            https://doi.org/10.1088/1755-1315/105/1/012081</li>
+                        <li> Hosseinian, H., & Damghani, H. (2019, February). Smart
+                            home energy management, using IoT system. In 2019
+                            5th Conference on Knowledge Based Engineering and
+                            Innovation (KBEI) (pp. 905–910). IEEE. https://doi.org/10.
+                            1109/KBEI.2019.8734979</li>
+                        <li> Lin, Y.-H. (2018). Design and implementation of an IoT
+                            oriented energy management system based on non intrusive and self-organizing neuro-fuzzy classification as
+                            an electrical energy audit in smart homes. Applied
+                            Sciences, 8(12), 2337. https://doi.org/10.3390/app8122337
+                            </li>
+                        <li> Lin, Y. H., Tang, H. S., Shen, T. Y., & Hsia, C. H. (2022). A
+                            smart home energy management system utilizing neu
+                           rocomputing-based time-series load modeling and fore
+                           casting facilitated by energy decomposition for smart
+                            home automation. IEEE Access, 10, 116747–116765.
+                            https://doi.org/10.1109/ACCESS.2022.3219068</li>
+                        <li> Ma, Y., Chen, X., Wang, L., & Yang, J. (2021). Study on
+                            smart home energy management system based on arti
+                           ficial intelligence. Journal of Sensors, 2021(1), 1–9.
+                            https://doi.org/10.1155/2021/9101453</li>
+                        <li> Mathur, P. (2020). Using machine learning and the IoT in
+                            telecom, energy, and agriculture. In IoT Machine
+                            Learning Applications in Telecom, Energy, and Agriculture.
+                            Apress.</li>
+                        <li> Metering, A. S., Visalatchi, S., & Sandeep, K. K. (2017).
+                            Smart energy metering and power theft control using
+                            arduino & GSM. In 2017 2nd International Conference for
+                            Convergence in Technology (I2CT) (858–961). IEEE.
+                            https://doi.org/10.1109/I2CT.2017.8226251</li>
+                        <li> Moore, D. L., Hamilton, Z., & Haddad, R. J. (2019). Pico-grid
+                            smart home energy management system using Mel fre
+                           quency cepstral coefficients. In 2019 SoutheastCon (pp.
+                            1–6). IEEE.</li>
+                        <li> Priyadarshini, I., Sahu, S., Kumar, R., & Taniar, D. (2022). A
+                            machine-learning ensemble model for predicting energy
+                            consumption in smart homes. Internet of Things, 20,
+                            100636. https://doi.org/10.1016/j.iot.2022.100636</li>
+                        <li>Shakeri, M., Amin, N., Pasupuleti, J., Mehbodniya, A., Asim, N.,
+                            Tiong, S. K., Low, F. W., Yaw, C. T., Samsudin, N. A.,
+                            Rokonuzzaman, M., Hen, C. K., & Lai, C. W. (2020). An
+                            autonomous home energy management system using
+                            dynamic priority strategy in conventional homes. Energies,
+                            13(13), 3312. https://doi.org/10.3390/en13133312</li>
+                        <li> Shareef, H., Al-Hassan, E., & Sirjani, R. (2020). Wireless
+                            home energy management system with smart rule
+                           based controller. Applied Sciences, 10(13), 4533. https://
+                            doi.org/10.3390/app10134533</li>
+                        <li> Singh, T., Solanki, A., & Sharma, S. K. (2022). Evolution of
+                            Smart Home Energy Management System Using Internet
+                            of Things and Machine Learning Algorithms, Proceedings
+                            of the Workshop on Advances in Computational
+                            Intelligence, its Concepts & Applications (ACI 2022), CEUR
+                            Workshop Proceedings, 5, 2022.</li>
+                        <li> Vasudevan, N., Venkatraman, V., Ramkumar, A., & Sheela,
+                            A. (2021). Real-time day ahead energy management for
+                            smart home using machine learning algorithm. Journal
+                            of Intelligent & Fuzzy Systems, 41(5), 5665–5676. https://
+                            doi.org/10.3233/JIFS-189886</li>
+                        <li> Zhou, B., Li, W., Chan, K. W., Cao, Y., Kuang, Y., Liu, X., &
+                            Wang, X. (2016). Smart home energy management sys
+                           tems: Concept, configurations, and scheduling strat
+                           egies. Renewable and Sustainable Energy Reviews, 61,30
+                           40. https://doi.org/10.1016/j.rser.2016.03.047</li>                               
+                    </ul>
+                </p>
+                <h3>Understanding Smart Energy Management</h3>
+                <p>Smart energy management represents a revolutionary approach to how we generate, distribute, and consume energy in the modern world. It encompasses a wide range of technologies, strategies, and practices designed to optimize energy usage while promoting sustainability.</p>
+                
+                <h3>Key Components</h3>
+                <ul>
+                    <li>Advanced Metering Infrastructure (AMI)</li>
+                    <li>Energy Management Systems (EMS)</li>
+                    <li>Building Automation Systems</li>
+                    <li>Smart Grid Technologies</li>
+                    <li>Renewable Energy Integration</li>
+                </ul>
+
+                <h3>Benefits of Smart Energy Management</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h4>Cost Reduction</h4>
+                        <p>Implementing smart energy management systems can lead to 20-30% reduction in energy costs through optimized consumption patterns and reduced waste.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Environmental Impact</h4>
+                        <p>Smart energy management significantly reduces carbon footprint by optimizing energy usage and integrating renewable energy sources.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Operational Efficiency</h4>
+                        <p>Automated systems and real-time monitoring improve overall operational efficiency and reduce maintenance costs.</p>
+                    </div>
+                </div>
+
+                <h3>Implementation Strategies</h3>
+                <ol>
+                    <li>Energy Audit and Assessment
+                        <ul>
+                            <li>Baseline energy consumption analysis</li>
+                            <li>Identification of energy waste sources</li>
+                            <li>Opportunity assessment for improvements</li>
+                        </ul>
+                    </li>
+                    <li>Technology Integration
+                        <ul>
+                            <li>Smart meter installation</li>
+                            <li>Building management system implementation</li>
+                            <li>IoT sensor deployment</li>
+                        </ul>
+                    </li>
+                    <li>Monitoring and Control
+                        <ul>
+                            <li>Real-time energy consumption tracking</li>
+                            <li>Automated control systems</li>
+                            <li>Performance analytics</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Industry Applications</h3>
+                <div class="industry-applications">
+                    <div class="application">
+                        <h4>Commercial Buildings</h4>
+                        <p>Smart energy management in commercial buildings can reduce energy consumption by up to 40% through automated HVAC control, lighting optimization, and occupancy-based adjustments.</p>
+                    </div>
+                    <div class="application">
+                        <h4>Industrial Facilities</h4>
+                        <p>Manufacturing plants and industrial facilities can achieve significant energy savings through process optimization, peak load management, and waste heat recovery systems.</p>
+                    </div>
+                    <div class="application">
+                        <h4>Residential Sector</h4>
+                        <p>Smart home energy management systems enable homeowners to monitor and control their energy usage, leading to reduced utility bills and improved comfort.</p>
+                    </div>
+                </div>
+
+                <h3>Best Practices</h3>
+                <div class="best-practices">
+                    <ul>
+                        <li>Regular system maintenance and updates</li>
+                        <li>Employee training and awareness programs</li>
+                        <li>Continuous monitoring and optimization</li>
+                        <li>Regular performance benchmarking</li>
+                        <li>Integration of renewable energy sources</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="electricity4">
+            <h2>Electricity 4.0</h2>
+            <div class="section-content">
+                <h3>The Evolution of Electricity</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Electricity 1.0</h4>
+                        <p>Basic electrical generation and distribution</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Electricity 2.0</h4>
+                        <p>Introduction of mass electrification</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Electricity 3.0</h4>
+                        <p>Digital integration and smart grids</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Electricity 4.0</h4>
+                        <p>Full convergence of digital and electrical technologies</p>
+                    </div>
+                </div>
+
+                <h3>Key Features of Electricity 4.0</h3>
+                <ul>
+                    <li>Digital transformation of energy systems</li>
+                    <li>Integration of renewable energy sources</li>
+                    <li>Advanced grid management capabilities</li>
+                    <li>AI-powered demand response</li>
+                    <li>Decentralized energy generation</li>
+                </ul>
+
+                <h3>Technologies Enabling Electricity 4.0</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <h4>Artificial Intelligence</h4>
+                        <p>AI algorithms optimize energy distribution and consumption patterns.</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>IoT Integration</h4>
+                        <p>Connected devices enable real-time monitoring and control.</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>Blockchain</h4>
+                        <p>Secure and transparent energy trading platforms.</p>
+                    </div>
+                </div>
+
+                <h3>Impact on Various Sectors</h3>
+                <div class="sector-impact">
+                    <h4>Residential</h4>
+                    <ul>
+                        <li>Smart home energy management</li>
+                        <li>Automated demand response</li>
+                        <li>Integration of home renewable systems</li>
+                    </ul>
+
+                    <h4>Commercial</h4>
+                    <ul>
+                        <li>Building energy optimization</li>
+                        <li>Advanced metering infrastructure</li>
+                        <li>Energy storage solutions</li>
+                    </ul>
+
+                    <h4>Industrial</h4>
+                    <ul>
+                        <li>Process optimization</li>
+                        <li>Predictive maintenance</li>
+                        <li>Energy-efficient manufacturing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Continue with other sections... -->
+
+    </main>
+    <a href="1 survey real.html" class="cta-button">SURVEY DATA</a>
+    <a href="1 survey new.html" class="cta-button">HELP US BY SURVEY</a>
+    <a href="data 1.html" class="cta-button">REAL TIME DATA</a>
+
+    <footer>
+        <p>&copy; 2024 Powering the Future. All rights reserved.</p>
+    </footer>
+</body>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #35424a;
+        }
+
+        .section-content {
+            margin-top: 20px;
+        }
+
+        .benefits-grid, .industry-applications, .tech-grid, .sector-impact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .benefit-item, .application, .tech-item {
+            flex: 1 1 calc(33.333% - 20px);
+            background: #e2e2e2;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .best-practices ul, .timeline ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .timeline-item {
+            margin-bottom: 15px;
+            background: #e2e2e2;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #c34646;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2274cb;
+}
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .benefit-item, .application, .tech-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>

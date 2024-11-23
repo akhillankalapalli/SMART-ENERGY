@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity 4.0 - The Future of Energy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #2c3e50;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        section {
+            background: #ffffff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Industry 4.0</h1>
+    <p>Powering the Future of Energy</p>
+
+
+</header>
+<div class="container">
+    <section id="Introduction">
+        <h2>Introduction</h2>
+        <p>The term Industry 4.0, which refers to the fourth industrial revolution, was introduced
+            in an initiative of the German government [1,2]. This is a paradigm shift driven by various
+            technological advancements that is reshaping how the manufacturing industry operates.
+            It has enormous potential to enhance sustainability and energy efficiency and reduce the
+            environmental impact of manufacturing. It also offers financial incentives to manufacturers
+            such as the promise of improved cost efficiency and product quality.
+            Since its introduction in 2011, Industry 4.0 has been one of the most highly researched
+            topics in the scientific community. Some of its technological components such as Internet of
+            Things (IoT), Big Data, Artificial Intelligence and Machine Learning, Augmented and Virtual
+            Reality, etc., have been at the top of the hype cycle of emerging technologies during this
+            period [3] and have received the attention of the industry as well as academia [4–6]. These
+            technologies facilitate Smart Manufacturing by enabling a high degree of interconnection of physical assets, digital tools and human operators [7]. The over-arching goal is to enable
+            advanced optimisation and control, automated performance monitoring, decision-making
+            and seamless communication across the production floor.
+            A comprehensive study spanning almost 750 German manufacturing companies found
+            that the various drivers of this paradigm shift include not only strategic and operational
+            incentives for the companies but environmental and social factors as well [8]. Some of
+            these strategic and operational incentives include increased flexibility, reduced time-tomarket
+            and optimised resource utilisation. Decision making is supported by real-time data
+            analytics ensuring that the organisation can maintain a competitive edge. On the other hand,
+            environmental factors include reduction in the energy consumption and carbon footprint.
+            Plans for Industry 5.0, such as the European Commission’s white paper [9], are already
+            in development, which integrate a human-centred approach. However, evidence of Industry
+            4.0 implementation is scarce, and this concept is still in “the blue sky” phase [10]. There
+            have been comprehensive literature reviews on the technological as well as managerial
+            barriers [10,11] to the implementation of Industry 4.0. Each and every industrial implementation
+            case has its unique problems, and bespoke solutions are required to overcome them.
+            This paper is focused on the approach taken to deliver and deploy a configurable
+            Industry 4.0 solution to address specific needs for a leading medical device manufacturer.
+            The basis of this is driven by the EU DENiM project [12], which brings together an interdisciplinary
+            team to develop a modular digital intelligence platform. The DENiM solution
+            enables the manufacturing sector to manage manufacturing systems in an energy efficient
+            manner through systematic requirements analysis, data management, modelling and
+            decision support tools.
+            The main requirements and interests as well as the unique strengths and weaknesses
+            of the company were understood at the outset of the project, and a pathway to achieve the
+            business objectives was charted. This paper describes the trajectory from a state of minimal
+            digitalisation to a customised Industry 4.0 solution.
+            The rest of the paper is organised as follows: Section 2 provides some background
+            information and gives a high-level overview of the production process. The project implementation
+            plan and the main functional blocks to be implemented are discussed. The following
+            sections then elaborate on each of the functional blocks of the implementation.
+            Each of them enumerates the challenges as well as the solutions used to overcome them.
+            As energy efficiency was one of the key interests of this project, Section 3 is dedicated to
+            the discussion of energy-centric data analytics and predictive models of the production
+            assets. This section also discusses the application of these models in production planning
+            and anomaly detection. Any production site is supported by auxiliary services such as
+            HVAC systems—both for maintaining indoor air quality as well as providing chilled water
+            and compressed air for critical production processes. These systems are prone to faults
+            that lead to energy and cost inefficient operation. Therefore, automated fault detection and
+            diagnosis was a key consideration; it is described in Section 4. This production facility also
+            houses onsite renewable energy assets in the form of wind turbines and a solar PV unit.
+            Optimising the energy from these sources was an important objective of this project, which
+            is discussed in Section 5. A context-driven user interface for advanced energy analytics as
+            well as an extended reality environment that provides an immersive experience for the user
+            are described in Section 6. Section 7 highlights the positive impacts of this implementation
+            on business operations by discussing the achievements against each of the performance
+            targets. Finally, Section 8 summarises the paper and lists the potential for further work at
+            this production facility.</p>
+            
+
+
+    </section>
+    <section id="Background">
+        <h2>Background</h2>
+        <p>This section begins with a brief introduction of the production process, identifying
+            the key assets within the scope of the project. We then give a brief overview of the
+            project plan, including the specific targets as well as the functional blocks comprising the
+            Industry 4.0 implementation. The production facility located in Cork, Ireland, is split over two separate buildings.
+            The facility produces various medical products that are classified into different product
+            families based on their application. A schematic of the of the facility is given in Figure 1.</p>
+            <img src="Screenshot 2024-11-17 153449.png">
+        <p>Many of these product types are medical implants manufactured from ultra-highmolecular-
+            weight polyethylene (UHMWPE). Although there are variations across each
+            product, the overall production process can be boiled down into the eight steps shown in
+            Figure 2 and described below:
+            1. Issue Material: the raw material is allocated to each of the product families. Operators
+            use printers and barcode scanners to enable tracking.
+            2. Saw: The material undergoes processing in machine saws to obtain blocks of the
+            required size for each product family.
+            3. Machine: The individual blocks are processed using Computer Numerical Control
+            (CNC) machines to obtain the finished product.
+            4. Inspect: The products are inspected for compliance and defective ones are scrapped.
+            Various machines are used during this stage.
+            5. Clean: The products are cleaned and sterilised in a multi-stage cleanline. The stages
+            include water-baths as well as air-dryers. The parameters such as temperature, flowrate,
+            pH, etc., are tightly controlled.
+            6. Label: Each product is assigned labels.
+            7. Package: The products are sealed and packaged.
+            8. Ship: The products are shipped from the facility.</p>
+            <img src="Screenshot 2024-11-17 153726.png">
+            <p>The devices and assets considered within the scope of this project can broadly be
+                classified into three categories:
+                1. Production Specific Assets: this category includes all the machine tools and devices
+                that are directly involved in the production process such as electric saws, CNC
+                machines, cleanlines, and sealing and packaging equipment.
+                2. Production Support Assets: this includes the auxiliary assets that are not directly
+                involved in the production process but nevertheless serve other critical aplications. Examples
+                include Air Handling Units (AHUs), chilled water system, and air compressors.
+                3. Renewable Energy Assets: this category includes the wind turbines, photovoltaic
+                panels and other assets that provide the facility with alternate sources of electricity.
+                Table 1 gives a description of the various assets involved at each step of the production
+                process. The table also gives information about the status of energy monitoring of each
+                category of assets. As can be seen from the table, only the cleanline machines are equipped
+                with energy sensors.</p>
+            <img src="Screenshot 2024-11-17 153901.png">
+            <h4>Project Plan</h4>
+            <p>When it comes to the actual implementation, Industry 4.0 is an open-ended concept
+                and does not prescribe specific guidelines [13]. Instead, manufacturing companies need
+                to focus on their specific needs when prioritising the implementation of Industry 4.0
+                technologies [14]. In our case study, the overarching aim of the Industry 4.0 solution was to
+                enhance not only individual efficiency but also the integration of the various assets across
+                the three categories mentioned above. A key focus area of this implementation was to
+                monitor and improve energy efficiency.
+                An effective implementation of Industry 4.0 goes beyond simply upgrading the technologies;
+                some of the critical success factors identified in a case study [15] include the
+                involvement of top management leadership; project planning; conducting preparatory
+                activities; the establishment of inter-functional teams; continuous development; and lean
+                management. In a nutshell, Industry 4.0 is not just about technology; it encompasses
+                all business activities and impacts all organisational units within a company. Given this
+                context, a systematic procedure derived from the HyDAPI [16] methodology was used.
+                This methodology is a hybrid of lean management principles and data-driven modelling
+                techniques that aims to aid organisations in their transition to Industry 4.0. This methodology
+                was also validated on real-world case studies, and, therefore, recognises and addresses
+                the practical challenges that arise in these contexts. For this research, seven steps were
+                adapted and reformulated from the HyDAPI methodology (Figure 3), with the overarch ing aim of streamlining the tasks and ensuring all targets are achieved. These stages are
+                described below:
+                Figure</p>
+                <img src="Screenshot 2024-11-17 154318.png">
+            <p>1. Project Charter: a project charter was created using the template shown in Figure 4.
+                This identified all the stakeholders, including, business management, production
+                engineers, utilities technicians, research partners, and representatives within the
+                funding agency. The key tasks were identified and assigned. Additionally, the project
+                management aspects were also included.
+                2. Process Overview: the high-level view of the production process is shown in Figure 2.
+                The intricate details of the process were discussed through several meetings, some of
+                which were held at the facility. The research partners were also given the opportunity
+                to shadow production engineers to better understand the process.
+                3. Business Requirements Specification: High-level meetings with the management
+                were held to formulate the business requirements. Three broad areas were identified,
+                which are described below, and the associated metrics are shown in Table 2.
+                • Digitalisation: Monitoring assets in real-time as well as equipping them with
+                data-driven decision support systems.
+                • Energy Efficiency: improving energy efficiency by optimising operation or
+                detecting and addressing faults. This aspect also includes the optimisation of
+                renewable energy sources available at the facility.
+                • Cost/Energy Savings: The above two will lead to savings in terms of electricity
+                consumption as well as cost.
+                These requirements were then translated into functional blocks, which are defined as
+                the individual modules of the Industry 4.0 solution, whose coordinated operation will
+                fulfil the business requirements. The different functional blocks are described later in
+                this section.
+                4. Data Catalogue: A data catalogue with a high-level overview of all the data sources
+                was developed as shown in Table 3. This also identifies the personnel responsible for
+                maintaining the datasets.
+                5. Data Architecture: This step delves into the details of each data source. While some
+                data points correspond to physical assets, others reflect overall aggregates coming
+                from a higher level of abstraction.
+                6. Data Assessment: A detailed data assessment was carried out for each of the asset
+                types identified in the data catalogue. The minimum data requirements for each of the
+                functional blocks were listed. For instance, for the production assets, energy sensors
+                are theminimumrequirement. The details of eachwill be given in the respective sections. 7. Connection Plan: from the above six steps, it emerged that the minimum data
+                requirements were not fulfilled for most of the functional blocks. In some cases,
+                the assets were not equipped with sensors, whereas in others, the data were being
+                collected but not stored on the site’s data historian. One of the key steps taken
+                was the installation of energy meters on most of the production assets. As can be
+                seen in Table 2, having 85% of the production assets equipped with real-time energy
+                monitoring capabilities was one of the concrete targets of this project.</p>
+                <img src="Screenshot 2024-11-17 154526.png">
+                <img src="Screenshot 2024-11-17 154549.png">
+    </section>
+    <section id="Data Analysis">
+        <h2>Data Analysis</h2>
+        <p>The two datasets have different temporal resolutions—the energy data are available
+            at one-minute resolution, whereas the number of production log entries depends on the
+            number of product batches processed during any given shift. There are two shifts of twelve
+            hours within a 24-h period: 7 a.m. to 7 p.m., and, 7 p.m. to 7 a.m. Thus, the first step
+            in the data analysis was to obtain shift-wise aggregates of the energy consumption and
+            production details. An example of the resampled and aggregated data is shown in Figure 5.
+            It is immediately clear from the data that idling energy is a significant proportion of the
+            total. For instance, in rows 1 and 4 of the sample dataset, even when a single unit is
+            produced there is a considerable amount of energy consumed within that shift.</p>
+        <img src="Screenshot 2024-11-17 154927.png">
+        <h2>Idling Energy</h2>
+        <p>One of the main targets of this project was to monitor energy consumption and identify
+            potential for idle energy reduction. In the literature, idling power is defined as the energy
+            consumption of a machine when it is powered on but not performing the actual machining
+            operation. However, in this case, as the process data are not available, it is not possible to
+            estimate the idling energy. Analysis of the data showed that the assets were being powered
+            on even during shifts with no production. The overall energy consumption during that
+            shift is considered as idling energy in this context as it is unnecessary energy consumption
+            and presents a potential for saving. It was also found that for a large number of shifts,
+            a small number of products were being manufactured. Apart from idle energy, we also
+            quantify the energy being consumed in shifts where the production output is less than
+            five and less than ten. The overall energy efficiency could be improved by optimising
+            the production schedule. The results from the analysis are reported in Figure 6, where
+            the terms ‘Idle 5’ and ‘Idle 10’ refer to shifts with less than five and ten units produced,
+            respectively. The aggregates over various categories of assets are presented in Table 4.
+            For instance, for the lathes over 71% of the total energy is being consumed in shifts with
+            less than 10 units produced. Thus, there is a tremendous energy savings potential that can
+            be realised by implementing idle time reduction and schedule optimisation. It is worth
+            mentioning that this was uncovered from simple data analysis, despite the lack of detailed
+            process data. The true potential of idle energy savings could be even higher if data were
+            available at a finer resolution.</p>
+        <img src="Screenshot 2024-11-17 155146.png">
+        <img src="Screenshot 2024-11-17 155246.png">
+    </section>
+    <section id="Energy Models">
+        <h2>Energy Models</h2>
+        <p>One of the main objectives of this Industry 4.0 project was to improve the energy
+            efficiency of the high energy consuming production assets. However, as mentioned in the
+            previous subsections, there are a couple of data availability and quality issues. Firstly, there
+            are no data on the process parameters that are directly related to the energy consumption.
+            Furthermore, the production data are logged at variable intervals throughout the shifts.
+            The data have to be resampled to get shift-wise aggregates of energy and production.
+            As there are only two variables available, linear regression was chosen as the method for
+            analysis. As mentioned before, there are various product families that are produced in
+            this facility, and each one has a different machining procedure. Thus, they have different
+            amounts of energy required during machining. For the assets in consideration in this
+            case study, the Saws and Cleanlines were used for multiple product families. However,
+            the lathes were dedicated to a single product. There were only a few lathes that were
+            used for multiple products, but they were used during separate shifts. These datapoints
+            where different products were produced in the same shift were removed before carrying
+            out the analysis. The dataset for modelling therefore consists of the production and energy
+            consumption information segregated by product type. We develop regression models for
+            each of the machines for specific product types.
+            A sample result from the analysis is shown in Figure 7, the subfigures of which show
+            (a) a scatterplot of energy consumption and production, (b) shift-wise production output
+            for the particular product, and (c) prediction of energy consumption overlaid on the actual
+            values. It can be seen that the models predict energy consumption with reasonable accuracy.
+            This can be used in two applications:
+            1. Production Planning: the model aids production planning by providing an estimate
+            of the energy required to produce a given number of units of a certain type of product
+            within a shift
+            2. Anomaly Detection: as can be seen in Figure 7, the model also flags some anomalous
+            energy consumption patterns that might be caused due to tool wear or faults in the
+            auxiliary machine systems. Thus, the model can also serve as a fault detection tool.</p>
+            <img src="Screenshot 2024-11-17 155459.png">
+        <p>Figure 7. Sample results of the energy model for Lathe 1 and Product 1. The subplots show
+            (a) scatterplot of energy consumption and production units, (b) units produced for each shift, and
+            (c) comparison of energy model predictions vs. actual measured values.</p>
+    </section>
+    <section id="Fault Detection And Diagnosis">
+        <h2>Fault Detection And Diagnosis</h2>
+        <p>Over time, mechanical equipment undergoes degradation leading to deviations from
+            the normal behaviour. If left unchecked, this deviation may worsen, leading to the equipment’s
+            inability to achieve its desired function, resulting in downtime. This deviation
+            from the standard condition is known as a fault [17], and the identification and root cause
+            analysis of its occurrence is the focus of the area of fault detection and diagnosis (FDD).
+            While FDD is key to identifying the early signs of equipment failure, it is also a means of
+            identifying inefficient energy consumption, especially in the case of Heating Ventilation and
+            Air-Conditioning (HVAC) equipment. For example, Air Handling Units (AHUs) provide
+            fresh and thermally comfortable air to manufacturing spaces. During normal operation,
+            AHUs leverage damper and valve positions to provide the required amount of airflow
+            at the appropriate temperature. However, a faulty valve position may lead to excessive
+            heating or cooling of the air, and to ensure it meets the requirements of the room, the AHU
+            will compensate for the fault. As the AHU is still capable of performing its desired function,
+            this energy-wasting fault may go unnoticed. This is a significant issue in HVAC equipment
+            as unnoticed faults may account for up to 20% of energy consumed [18]. Therefore, the
+            early detection and diagnosis of hidden faults is a key energy conservation measure.
+            The Industry 4.0 paradigm brings new tools and approaches that can detect these
+            hidden faults, but they may not yet be applicable in a practical setting. Many different types
+            of data-driven algorithms have been successfully applied to FDD problems, as outlined
+            in multiple systematic reviews of the landscape [19–22]. However, in [21] it was reported
+            that about 65% of these studies utilise datasets from experiments in a laboratory setting
+            such as those in [23,24]. The obvious issue that arises here is that these approaches would
+            not be applicable if the same data quality and quantity are absent in the practical setting.
+            Therefore, domain expertise plays a major role in FDD.
+            The main production support assets at this facility include AHUs, chillers, and air
+            compressors. However, a limited number of data were available for the chilled water
+            system and air compressors. Therefore, at this stage we only considered the AHUs. As mentioned above, the production facility consists of two large buildings, each
+            of which is served by several Air Handling Units (AHUs). AHUs are one of the most
+            important components of the HVAC system of a building, and the literature is full of FDD
+            methods for AHUs [21]. However, there are various data availability and quality issues
+            when it comes to real-world application. One of the reliable approaches, the Air Handling
+            Unit Performance Assessment Rules (APAR), is an expert systems approach introduced by
+            House et al. [25]. Only eleven data points are required to implement this ruleset. Moreover,
+            it solely depends on the current data sample and therefore does not depend on the sampling
+            interval, nor does it require one to store previous data. Some sample rules are shown in
+            Table 5. Whenever a rule evaluates to true, it indicates the presence of some fault as the
+            AHU is deviating from expected behaviour.</p>
+            <img src="Screenshot 2024-11-17 155748.png">
+            <p>The APAR ruleset was implemented on four AHUs, for which data are available.
+                To evaluate the potential impact of the FDD tool, data for the year 2022 were analysed.
+                The AHU was considered to be in faulty operation when the data triggered any rule.
+                In particular, the faults such as stuck dampers, passing coils, etc. which cause excessive
+                energy consumption, were considered. The energy consumption during faulty operation
+                was computed and compared against the normal operation. As an example, the energy
+                consumption of one of the AHUs is shown in Figure 8, which captures the difference
+                between the normal operation and operation under the damper stuch fault.</p>
+            <img src="Screenshot 2024-11-17 155812.png">
+    </section>
+    <section id="Renewable Integration">
+        <h2>Renewable Integration</h2>
+        <p>The lower costs of the technologies employed by renewable energy sources (RES) make
+            their implementation in the industry more attractive, to supply the energy consumption of
+            the electricity grid, taking advantage of renewable sources in the generation of electricity.
+            Industries are increasingly opting for RES integration in their various production processes.
+            The implementation and optimisation of RES allow one to increase the production profits
+            as well as minimise the consumption of energy produced by fossil fuels.
+            The aim of this tool is to minimise costs and emissions by maximising the use of
+            renewable energy in the production process. For this purpose, a strategy based on a
+            supervisory controller has been designed, using Model-Based Predictive Control (MPC).
+            This control algorithm is based on the calculation of a real-time optimisation of a functional,
+            where dynamic models of all generation and demand assets are considered. The schematic
+            diagram of the microgird at the site can be seen in Figure 9.
+            </p>
+            <img src="Screenshot 2024-11-17 160154.png">
+            <p>This scheme of the manufacturing plant can be considered as a microgrid with the
+                following assets:
+                • Renewable energy sources: there is a wind turbine and a solar plant in this factory.
+                • Battery bank (B). Store energy and discharge when it is needed.
+                • Combined Heat and Power (CHP). Produced energy and heat from gas.
+                • Remaining consumption: all consumption that cannot be manipulated. It is about 90%
+                of the total.
+                • Manipulable demand as a group of CNCs.
+                All these assets have been modelled in order to be able to control them within the
+                MPC. In particular, more accurate models have been developed for the RESs as these are
+                the energy sources to be maximised. The developed models can be found in [26], together
+                with all the in-depth development of this tool. Only the models implemented for the
+                RESs, the high-level development of the tool and some of the results obtained will be
+                shown below.</p>
+    </section>
+    <section id="what-is">
+        <h2>What is Electricity 4.0?</h2>
+        <p>Electricity 4.0 refers to the fourth industrial revolution in the electricity sector, characterized by the integration of digital technologies into energy systems. This paradigm shift aims to create a more efficient, reliable, and sustainable electrical grid.</p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li>Smart grid technologies</li>
+            <li>Advanced metering infrastructure</li>
+            <li>Decentralized energy generation</li>
+            <li>Real-time data analytics</li>
+            <li>Automated demand response</li>
+        </ul>
+    </section>
+
+    <section id="technologies">
+        <h2>Technologies Driving Electricity 4.0</h2>
+        <h3>Internet of Things (IoT)</h3>
+        <p>IoT devices enable real-time monitoring and control of electrical systems, from power plants to home appliances.</p>
+        <h3>Artificial Intelligence (AI)</h3>
+        <p>AI algorithms optimize energy distribution, predict maintenance needs, and enhance grid stability.</p>
+        <h3>Big Data Analytics</h3>
+        <p>Advanced analytics help utilities make data-driven decisions and improve overall system efficiency.</p>
+        <h3>Blockchain</h3>
+        <p>Blockchain technology facilitates peer-to-peer energy trading and enhances the security of energy transactions.</p>
+    </section>
+
+    <section id="benefits">
+        <h2>Benefits of Electricity 4.0</h2>
+        <ul>
+            <li>Enhanced energy efficiency and reduced waste</li>
+            <li>Improved grid reliability and resilience</li>
+            <li>Integration of renewable energy sources</li>
+            <li>Empowerment of consumers through energy management tools</li>
+            <li>Reduced operational costs for utilities</li>
+            <li>Lower carbon emissions and environmental impact</li>
+        </ul>
+        <h3>Case Study: Smart City Implementation</h3>
+        <p>The city of Amsterdam implemented Electricity 4.0 technologies, resulting in a 14% reduction in energy consumption and a 13% decrease in carbon emissions over three years.</p>
+    </section>
+
+    <section id="challenges">
+        <h2>Challenges in Adopting Electricity 4.0</h2>
+        <ul>
+            <li>Cybersecurity risks and data privacy concerns</li>
+            <li>High initial investment costs for infrastructure upgrades</li>
+            <li>Need for a skilled workforce to manage new technologies</li>
+            <li>Regulatory and policy hurdles</li>
+            <li>Interoperability issues between different systems and standards</li>
+        </ul>
+        <h3>Overcoming Challenges</h3>
+        <p>Addressing these challenges requires collaboration between governments, utilities, technology providers, and consumers. Initiatives such as public-private partnerships, workforce training programs, and standardization efforts are crucial for successful implementation.</p>
+    </section>
+
+    <section id="implementation">
+        <h2>Implementing Electricity 4.0</h2>
+        <h3>Steps for Utilities:</h3>
+        <ol>
+            <li>Assess current infrastructure and identify upgrade needs</li>
+            <li>Develop a comprehensive digital transformation strategy</li>
+            <li>Invest in smart grid technologies and data analytics capabilities</li>
+            <li>Train staff and hire specialists in relevant technologies</li>
+            <li>Engage with customers to promote adoption of smart energy solutions</li>
+        </ol>
+        <h3>For Policymakers:</h3>
+        <ul>
+            <li>Develop supportive regulatory frameworks</li>
+            <li>Provide incentives for Electricity 4.0 adoption</li>
+            <li>Invest in research and development</li>
+            <li>Promote standardization and interoperability</li>
+        </ul>
+    </section>
+
+    <section id="future">
+        <h2>The Future of Electricity 4.0</h2>
+        <p>The future of Electricity 4.0 holds immense potential for transforming the energy landscape:</p>
+        <ul>
+            <li>Fully autonomous grid systems</li>
+            <li>Widespread adoption of peer-to-peer energy trading</li>
+            <li>Integration with smart city infrastructures</li>
+            <li>Advanced energy storage solutions</li>
+            <li>Seamless integration of electric vehicles into the grid</li>
+        </ul>
+        <p>Expert Opinion: "Electricity 4.0 will be the cornerstone of a sustainable and resilient energy future, enabling us to tackle climate change while meeting growing global energy demands." - Dr. Jane Smith, Energy Futurist</p>
+        </section>
+        <section id="hello">
+            <h2>Reference</h2>
+            <p>References
+                1. Kagermann, H.; Lukas,W.D.;Wahlster,W. Industrie 4.0: Mit dem Internet der Dinge auf demWeg zur 4. industriellen Revolution.
+                VDI Nachrichten 2011, 13, 2–3.
+                2. Kagermann, H. Change through digitization—Value creation in the age of Industry 4.0. In Management of Permanent Change;
+                Springer: Berlin/Heidelberg, Germany, 2014; pp. 23–45.
+                3. Rivera, J. Gartner’s 2015 Hype Cycle for Emerging Technologies Identifies the Computing Innovations That Organizations Should
+                Monitor. Available online: https://www.gartner.com/en/newsroom/press-releases/2015-08-18-gartners-2015-hype-cycle-foremerging-
+                technologies-identifies-the-computing-innovations-that-organizations-should-monitor (accessed on 9 November 2023).
+                4. Zhong, R.Y.; Ge,W. Internet of things enabled manufacturing: A review. Int. J. Agil. Syst. Manag. 2018, 11, 126–154. [CrossRef]
+                5. Cioffi, R.; Travaglioni, M.; Piscitelli, G.; Petrillo, A.; De Felice, F. Artificial intelligence and machine learning applications in smart
+                production: Progress, trends, and directions. Sustainability 2020, 12, 492. [CrossRef]
+                6. Damiani, L.; Demartini, M.; Guizzi, G.; Revetria, R.; Tonelli, F. Augmented and virtual reality applications in industrial systems:
+                A qualitative review towards the Industry 4.0 era. IFAC-Pap. 2018, 51, 624–630. [CrossRef]
+                7. Zheng, P.; Wang, H.; Sang, Z.; Zhong, R.Y.; Liu, Y.; Liu, C.; Mubarok, K.; Yu, S.; Xu, X. Smart manufacturing systems for Industry
+                4.0: Conceptual framework, scenarios, and future perspectives. Front. Mech. Eng. 2018, 13, 137–150. [CrossRef]
+                8. Müller, J.M.; Kiel, D.; Voigt, K.I. What drives the implementation of Industry 4.0? The role of opportunities and challenges in the
+                context of sustainability. Sustainability 2018, 10, 247. [CrossRef]
+                9. Directorate-General for Research and Innovation, European Commission. Industry 5.0—Towards a Sustainable, Human-Centric
+                and Resilient European Industry. Available online: https://research-and-innovation.ec.europa.eu/knowledge-publications-toolsand-
+                data/publications/all-publications/industry-50-towards-sustainable-human-centric-and-resilient-european-industry_en
+                (accessed on 28 January 2024).
+                10. Bajic, B.; Rikalovic, A.; Suzic, N.; Piuri, V. Industry 4.0 implementation challenges and opportunities: A managerial perspective.
+                IEEE Syst. J. 2020, 15, 546–559. [CrossRef]
+                11. Rikalovic, A.; Suzic, N.; Bajic, B.; Piuri, V. Industry 4.0 implementation challenges and opportunities: A technological perspective.
+                IEEE Syst. J. 2021, 16, 2797–2810. [CrossRef]
+                12. The DENiM Consortium. DENiM: Unlocking the Energy Saving Potential in Manufacturing Systems. Available online:
+                https://denim-fof.eu/ (accessed on 7 December 2023).</p>
+        <a href="data 2.html" class="cta-button">REAL TIME DATA</a>
+        <a href="1 survey new.html" class="cta-button">HELP US BY SURVEY</a>
+        </section>
+    
+
